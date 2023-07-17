@@ -1,0 +1,21 @@
+{
+  "pins" : [
+    {
+      "identity" : "infinitescrollviews",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/b5i/InfiniteScrollViews",
+      "state" : {
+        "revision" : "d022aa682a84534bc3b3164ab5e1d92b0f6d97e8"
+      }
+    },
+    {
+      "identity" : "youtubekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/b5i/YouTubeKit",
+      "state" : {
+        "revision" : "429c928cee65b55f4e0369c7b44a64eaf4d82112"
+      }
+    }
+  ],
+  "version" : 2
+}

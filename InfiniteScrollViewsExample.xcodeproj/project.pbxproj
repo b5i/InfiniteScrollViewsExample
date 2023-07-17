@@ -7,10 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		340DC5302A65E4DB00F0876F /* InfiniteScrollViews in Frameworks */ = {isa = PBXBuildFile; productRef = 340DC52F2A65E4DB00F0876F /* InfiniteScrollViews */; };
 		346258E92A643AFC0046D0ED /* InfiniteScrollViewsExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346258E82A643AFC0046D0ED /* InfiniteScrollViewsExampleApp.swift */; };
 		346258EB2A643AFC0046D0ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346258EA2A643AFC0046D0ED /* ContentView.swift */; };
 		346258ED2A643B010046D0ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 346258EC2A643B010046D0ED /* Assets.xcassets */; };
 		346258F02A643B010046D0ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 346258EF2A643B010046D0ED /* Preview Assets.xcassets */; };
+		346258FC2A643B530046D0ED /* HorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346258F72A643B530046D0ED /* HorizontalView.swift */; };
+		346258FE2A643B530046D0ED /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346258F92A643B530046D0ED /* DayView.swift */; };
+		346258FF2A643B530046D0ED /* PagedCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346258FA2A643B530046D0ED /* PagedCalendarView.swift */; };
+		346259002A643B530046D0ED /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346258FB2A643B530046D0ED /* CalendarView.swift */; };
+		346259062A6458940046D0ED /* AutomaticLoadMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346259052A6458940046D0ED /* AutomaticLoadMoreView.swift */; };
+		346259092A6463FE0046D0ED /* YouTubeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 346259082A6463FE0046D0ED /* YouTubeKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,11 @@
 		346258EA2A643AFC0046D0ED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		346258EC2A643B010046D0ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		346258EF2A643B010046D0ED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		346258F72A643B530046D0ED /* HorizontalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalView.swift; sourceTree = "<group>"; };
+		346258F92A643B530046D0ED /* DayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
+		346258FA2A643B530046D0ED /* PagedCalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedCalendarView.swift; sourceTree = "<group>"; };
+		346258FB2A643B530046D0ED /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		346259052A6458940046D0ED /* AutomaticLoadMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomaticLoadMoreView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +38,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				340DC5302A65E4DB00F0876F /* InfiniteScrollViews in Frameworks */,
+				346259092A6463FE0046D0ED /* YouTubeKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		340DC52E2A65E4DB00F0876F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		346258DC2A643AFC0046D0ED = {
 			isa = PBXGroup;
 			children = (
 				346258E72A643AFC0046D0ED /* InfiniteScrollViewsExample */,
 				346258E62A643AFC0046D0ED /* Products */,
+				340DC52E2A65E4DB00F0876F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +73,7 @@
 		346258E72A643AFC0046D0ED /* InfiniteScrollViewsExample */ = {
 			isa = PBXGroup;
 			children = (
+				346258F62A643B230046D0ED /* Examples */,
 				346258E82A643AFC0046D0ED /* InfiniteScrollViewsExampleApp.swift */,
 				346258EA2A643AFC0046D0ED /* ContentView.swift */,
 				346258EC2A643B010046D0ED /* Assets.xcassets */,
@@ -65,6 +88,18 @@
 				346258EF2A643B010046D0ED /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		346258F62A643B230046D0ED /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				346259052A6458940046D0ED /* AutomaticLoadMoreView.swift */,
+				346258FB2A643B530046D0ED /* CalendarView.swift */,
+				346258F92A643B530046D0ED /* DayView.swift */,
+				346258F72A643B530046D0ED /* HorizontalView.swift */,
+				346258FA2A643B530046D0ED /* PagedCalendarView.swift */,
+			);
+			path = Examples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +118,10 @@
 			dependencies = (
 			);
 			name = InfiniteScrollViewsExample;
+			packageProductDependencies = (
+				346259082A6463FE0046D0ED /* YouTubeKit */,
+				340DC52F2A65E4DB00F0876F /* InfiniteScrollViews */,
+			);
 			productName = InfiniteScrollViewsExample;
 			productReference = 346258E52A643AFC0046D0ED /* InfiniteScrollViewsExample.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +150,10 @@
 				Base,
 			);
 			mainGroup = 346258DC2A643AFC0046D0ED;
+			packageReferences = (
+				346259072A6463FE0046D0ED /* XCRemoteSwiftPackageReference "YouTubeKit" */,
+				340DC52B2A65E3FB00F0876F /* XCRemoteSwiftPackageReference "InfiniteScrollViews" */,
+			);
 			productRefGroup = 346258E62A643AFC0046D0ED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,6 +180,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				346258FC2A643B530046D0ED /* HorizontalView.swift in Sources */,
+				346259062A6458940046D0ED /* AutomaticLoadMoreView.swift in Sources */,
+				346259002A643B530046D0ED /* CalendarView.swift in Sources */,
+				346258FE2A643B530046D0ED /* DayView.swift in Sources */,
+				346258FF2A643B530046D0ED /* PagedCalendarView.swift in Sources */,
 				346258EB2A643AFC0046D0ED /* ContentView.swift in Sources */,
 				346258E92A643AFC0046D0ED /* InfiniteScrollViewsExampleApp.swift in Sources */,
 			);
@@ -197,7 +245,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +302,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -344,6 +392,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		340DC52B2A65E3FB00F0876F /* XCRemoteSwiftPackageReference "InfiniteScrollViews" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/b5i/InfiniteScrollViews";
+			requirement = {
+				kind = revision;
+				revision = d022aa682a84534bc3b3164ab5e1d92b0f6d97e8;
+			};
+		};
+		346259072A6463FE0046D0ED /* XCRemoteSwiftPackageReference "YouTubeKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/b5i/YouTubeKit";
+			requirement = {
+				kind = revision;
+				revision = 429c928cee65b55f4e0369c7b44a64eaf4d82112;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		340DC52F2A65E4DB00F0876F /* InfiniteScrollViews */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 340DC52B2A65E3FB00F0876F /* XCRemoteSwiftPackageReference "InfiniteScrollViews" */;
+			productName = InfiniteScrollViews;
+		};
+		346259082A6463FE0046D0ED /* YouTubeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 346259072A6463FE0046D0ED /* XCRemoteSwiftPackageReference "YouTubeKit" */;
+			productName = YouTubeKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 346258DD2A643AFC0046D0ED /* Project object */;
 }

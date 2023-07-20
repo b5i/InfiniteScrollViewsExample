@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		340DC5302A65E4DB00F0876F /* InfiniteScrollViews in Frameworks */ = {isa = PBXBuildFile; productRef = 340DC52F2A65E4DB00F0876F /* InfiniteScrollViews */; };
+		344DFF062A69918E0057093F /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 344DFF052A69918E0057093F /* CachedAsyncImage */; };
 		346258E92A643AFC0046D0ED /* InfiniteScrollViewsExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346258E82A643AFC0046D0ED /* InfiniteScrollViewsExampleApp.swift */; };
 		346258EB2A643AFC0046D0ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346258EA2A643AFC0046D0ED /* ContentView.swift */; };
 		346258ED2A643B010046D0ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 346258EC2A643B010046D0ED /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				344DFF062A69918E0057093F /* CachedAsyncImage in Frameworks */,
 				340DC5302A65E4DB00F0876F /* InfiniteScrollViews in Frameworks */,
 				346259092A6463FE0046D0ED /* YouTubeKit in Frameworks */,
 			);
@@ -121,6 +123,7 @@
 			packageProductDependencies = (
 				346259082A6463FE0046D0ED /* YouTubeKit */,
 				340DC52F2A65E4DB00F0876F /* InfiniteScrollViews */,
+				344DFF052A69918E0057093F /* CachedAsyncImage */,
 			);
 			productName = InfiniteScrollViewsExample;
 			productReference = 346258E52A643AFC0046D0ED /* InfiniteScrollViewsExample.app */;
@@ -153,6 +156,7 @@
 			packageReferences = (
 				346259072A6463FE0046D0ED /* XCRemoteSwiftPackageReference "YouTubeKit" */,
 				340DC52B2A65E3FB00F0876F /* XCRemoteSwiftPackageReference "InfiniteScrollViews" */,
+				344DFF042A69918E0057093F /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 			);
 			productRefGroup = 346258E62A643AFC0046D0ED /* Products */;
 			projectDirPath = "";
@@ -399,7 +403,15 @@
 			repositoryURL = "https://github.com/b5i/InfiniteScrollViews";
 			requirement = {
 				kind = revision;
-				revision = d022aa682a84534bc3b3164ab5e1d92b0f6d97e8;
+				revision = 9a503a50b12d5a268844460b1f524fe7cfbac318;
+			};
+		};
+		344DFF042A69918E0057093F /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				kind = exactVersion;
+				version = 2.1.1;
 			};
 		};
 		346259072A6463FE0046D0ED /* XCRemoteSwiftPackageReference "YouTubeKit" */ = {
@@ -417,6 +429,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 340DC52B2A65E3FB00F0876F /* XCRemoteSwiftPackageReference "InfiniteScrollViews" */;
 			productName = InfiniteScrollViews;
+		};
+		344DFF052A69918E0057093F /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 344DFF042A69918E0057093F /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
 		};
 		346259082A6463FE0046D0ED /* YouTubeKit */ = {
 			isa = XCSwiftPackageProductDependency;

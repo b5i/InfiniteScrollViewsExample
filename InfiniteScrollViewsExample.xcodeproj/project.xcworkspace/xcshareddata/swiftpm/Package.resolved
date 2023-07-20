@@ -5,7 +5,16 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/b5i/InfiniteScrollViews",
       "state" : {
-        "revision" : "d022aa682a84534bc3b3164ab5e1d92b0f6d97e8"
+        "revision" : "9a503a50b12d5a268844460b1f524fe7cfbac318"
+      }
+    },
+    {
+      "identity" : "swiftui-cached-async-image",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/lorenzofiamingo/swiftui-cached-async-image",
+      "state" : {
+        "revision" : "467a3d17479887943ab917a379e62bbaff60ac8a",
+        "version" : "2.1.1"
       }
     },
     {

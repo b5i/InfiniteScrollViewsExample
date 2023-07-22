@@ -174,8 +174,8 @@
             filePath = "../InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "344"
-            endingLineNumber = "344"
+            startingLineNumber = "381"
+            endingLineNumber = "381"
             landmarkName = "recenterIfNecessary(beforeIndexUndefined:afterIndexUndefined:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -190,8 +190,8 @@
             filePath = "../InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "411"
-            endingLineNumber = "411"
+            startingLineNumber = "448"
+            endingLineNumber = "448"
             landmarkName = "goDown()"
             landmarkType = "7">
          </BreakpointContent>
@@ -206,58 +206,10 @@
             filePath = "../InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "373"
-            endingLineNumber = "373"
+            startingLineNumber = "410"
+            endingLineNumber = "410"
             landmarkName = "goUp()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4285A06C-404D-438C-9AE3-D697CB5D2705"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "370"
-            endingLineNumber = "370"
-            landmarkName = "goUp()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4285A06C-404D-438C-9AE3-D697CB5D2705 - c02408010938e352"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "InfiniteScrollViewsExample.UIInfiniteScrollView.goUp() -&gt; ()"
-                  moduleName = "InfiniteScrollViewsExample"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/toine/app/AntoineBollengier/InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "349"
-                  endingLineNumber = "349"
-                  offsetFromSymbolStart = "232">
-               </Location>
-               <Location
-                  uuid = "4285A06C-404D-438C-9AE3-D697CB5D2705 - c02408010938e352"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "InfiniteScrollViewsExample.UIInfiniteScrollView.goUp() -&gt; ()"
-                  moduleName = "InfiniteScrollViewsExample"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/toine/app/AntoineBollengier/InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "349"
-                  endingLineNumber = "349"
-                  offsetFromSymbolStart = "272">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -270,8 +222,8 @@
             filePath = "../InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "493"
-            endingLineNumber = "493"
+            startingLineNumber = "532"
+            endingLineNumber = "532"
             landmarkName = "createAndAppendNewViewToEnd()"
             landmarkType = "7">
          </BreakpointContent>
@@ -286,8 +238,8 @@
             filePath = "../InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "545"
-            endingLineNumber = "545"
+            startingLineNumber = "584"
+            endingLineNumber = "584"
             landmarkName = "placeNewViewToLeft(leftEdge:)"
             landmarkType = "7">
             <Locations>
@@ -334,8 +286,8 @@
             filePath = "../InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "507"
-            endingLineNumber = "507"
+            startingLineNumber = "546"
+            endingLineNumber = "546"
             landmarkName = "placeNewViewToRight(rightEdge:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -350,8 +302,8 @@
             filePath = "../InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "537"
-            endingLineNumber = "537"
+            startingLineNumber = "576"
+            endingLineNumber = "576"
             landmarkName = "createAndAppendNewViewToBeginning()"
             landmarkType = "7">
          </BreakpointContent>
@@ -366,8 +318,8 @@
             filePath = "../InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "551"
-            endingLineNumber = "551"
+            startingLineNumber = "590"
+            endingLineNumber = "590"
             landmarkName = "placeNewViewToLeft(leftEdge:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -382,8 +334,8 @@
             filePath = "../InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "544"
-            endingLineNumber = "544"
+            startingLineNumber = "583"
+            endingLineNumber = "583"
             landmarkName = "placeNewViewToLeft(leftEdge:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -398,8 +350,8 @@
             filePath = "../InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "550"
-            endingLineNumber = "550"
+            startingLineNumber = "589"
+            endingLineNumber = "589"
             landmarkName = "placeNewViewToLeft(leftEdge:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -414,8 +366,8 @@
             filePath = "../InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "601"
-            endingLineNumber = "601"
+            startingLineNumber = "640"
+            endingLineNumber = "640"
             landmarkName = "redrawViewsX(minimumVisibleX:toMaxX:beforeIndex:afterIndex:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -430,8 +382,8 @@
             filePath = "../InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "609"
-            endingLineNumber = "609"
+            startingLineNumber = "648"
+            endingLineNumber = "648"
             landmarkName = "redrawViewsX(minimumVisibleX:toMaxX:beforeIndex:afterIndex:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -446,8 +398,8 @@
             filePath = "../InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "583"
-            endingLineNumber = "583"
+            startingLineNumber = "622"
+            endingLineNumber = "622"
             landmarkName = "redrawViewsX(minimumVisibleX:toMaxX:beforeIndex:afterIndex:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -462,8 +414,8 @@
             filePath = "../InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "582"
-            endingLineNumber = "582"
+            startingLineNumber = "621"
+            endingLineNumber = "621"
             landmarkName = "redrawViewsX(minimumVisibleX:toMaxX:beforeIndex:afterIndex:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -478,8 +430,8 @@
             filePath = "../InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "587"
-            endingLineNumber = "587"
+            startingLineNumber = "626"
+            endingLineNumber = "626"
             landmarkName = "redrawViewsX(minimumVisibleX:toMaxX:beforeIndex:afterIndex:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -503,22 +455,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5C8E334F-E3FB-4D4C-9951-9783671B06FF"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "700"
-            endingLineNumber = "700"
-            landmarkName = "redrawViewsY(minimumVisibleY:toMaxY:beforeIndex:afterIndex:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "A2E190A4-5AFE-482C-9CA2-9B3CE29F9C21"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -526,8 +462,8 @@
             filePath = "../InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "648"
-            endingLineNumber = "648"
+            startingLineNumber = "687"
+            endingLineNumber = "687"
             landmarkName = "redrawViewsY(minimumVisibleY:toMaxY:beforeIndex:afterIndex:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -542,8 +478,8 @@
             filePath = "../InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "638"
-            endingLineNumber = "638"
+            startingLineNumber = "677"
+            endingLineNumber = "677"
             landmarkName = "redrawViewsY(minimumVisibleY:toMaxY:beforeIndex:afterIndex:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -558,8 +494,8 @@
             filePath = "../InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "479"
-            endingLineNumber = "479"
+            startingLineNumber = "516"
+            endingLineNumber = "516"
             landmarkName = "layoutSubviews()"
             landmarkType = "7">
          </BreakpointContent>
@@ -574,8 +510,8 @@
             filePath = "../InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "448"
-            endingLineNumber = "448"
+            startingLineNumber = "485"
+            endingLineNumber = "485"
             landmarkName = "layoutSubviews()"
             landmarkType = "7">
             <Locations>
@@ -622,8 +558,8 @@
             filePath = "../InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "447"
-            endingLineNumber = "447"
+            startingLineNumber = "484"
+            endingLineNumber = "484"
             landmarkName = "layoutSubviews()"
             landmarkType = "7">
          </BreakpointContent>
@@ -638,9 +574,41 @@
             filePath = "../InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "486"
-            endingLineNumber = "486"
+            startingLineNumber = "523"
+            endingLineNumber = "523"
             landmarkName = "insertView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9812CE86-C7E5-4865-BDC1-7B2063835253"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AutomaticLoadMoreView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
+            landmarkName = "getMoreVideos()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E4ACF5B3-589F-4F76-B204-C53D80E2F408"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AutomaticLoadMoreView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
+            landmarkName = "getMoreVideos()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

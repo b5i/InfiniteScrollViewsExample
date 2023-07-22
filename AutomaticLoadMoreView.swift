@@ -11,7 +11,7 @@ import InfiniteScrollViews
 import CachedAsyncImage
 
 struct AutomaticLoadMoreView: View {
-    @ObservedObject private var model = YTModel()
+    @ObservedObject private var model = YTModel.shared
     @State private var baseIndex: Int = 0
     
     /// Should redraw the elements on the screen? Useful when you have a loader and want to display new elements instead.
@@ -65,7 +65,6 @@ struct AutomaticLoadMoreView: View {
                                             }
                                         }
                                     }
-                                    .border(.white)
                                 },
                                 contentFrame: { _ in
                                     return .init(x: 0, y: 0, width: geometry.size.width, height: 200)
@@ -94,6 +93,15 @@ struct AutomaticLoadMoreView: View {
                                     }
                                 },
                                 orientation: .vertical,
+                                refreshAction: { endAction in
+                                    Task {
+                                        await model.refreshVideos()
+                                        shouldReloadInfiniteScrollView = true
+                                        DispatchQueue.main.async {
+                                            endAction()
+                                        }
+                                    }
+                                },
                                 updateBinding: $shouldReloadInfiniteScrollView
                             )
                         }
@@ -140,11 +148,17 @@ struct AutomaticLoadMoreView: View {
     }
     
     private class YTModel: ObservableObject {
+        static let shared = YTModel()
+        
         let YTM = YouTubeModel()
         @Published var isQuerying: Bool = false
         @Published var videos: [any YTSearchResult] = []
         var tokens: (String, String)?
         
+        func refreshVideos() async {
+            tokens = nil
+            await getMoreVideos()
+        }
         
         func getMoreVideos() async {
             if self.isQuerying {
@@ -171,8 +185,12 @@ struct AutomaticLoadMoreView: View {
                     self.tokens = (continuationToken, visitorData)
                 }
                 DispatchQueue.main.async {
-                    self.videos = result.results
-                    self.isQuerying = false
+                    /// Refresh UI.
+                    self.videos = []
+                    DispatchQueue.main.async {
+                        self.videos = result.results
+                        self.isQuerying = false
+                    }
                 }
             }
         }

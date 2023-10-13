@@ -41,7 +41,7 @@ struct AutomaticLoadMoreView: View {
                             ProgressView()
                         } else {
                             InfiniteScrollView(
-                                frame: .init(x: 0, y: 0, width: geometry.size.width, height: 200),
+                                frame: .init(x: 0, y: 0, width: geometry.size.width, height: geometry.size.height),
                                 changeIndex: baseIndex,
                                 content: { changeIndex in
                                     HStack {
@@ -65,6 +65,7 @@ struct AutomaticLoadMoreView: View {
                                             }
                                         }
                                     }
+                                    .frame(width: geometry.size.width, height: geometry.size.height)
                                 },
                                 contentFrame: { _ in
                                     return .init(x: 0, y: 0, width: geometry.size.width, height: 200)

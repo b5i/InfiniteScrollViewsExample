@@ -41,34 +41,17 @@ struct AutomaticLoadMoreView: View {
                             ProgressView()
                         } else {
                             InfiniteScrollView(
-                                frame: .init(x: 0, y: 0, width: geometry.size.width, height: geometry.size.height),
+                                frame: .init(x: 0, y: 0, width: geometry.size.width, height: geometry.size.height * 0.8),
                                 changeIndex: baseIndex,
                                 content: { changeIndex in
-                                    HStack {
+                                    Group {
                                         if model.videos.count > changeIndex + 1, let video = model.videos[changeIndex] as? YTVideo {
-                                            CachedAsyncImage(url: video.thumbnails.last?.url) { result in
-                                                switch result {
-                                                case .empty:
-                                                    Text("No image")
-                                                case .success(let image):
-                                                    image.resizable().scaledToFit()
-                                                case .failure(let error):
-                                                    Text(error.localizedDescription)
-                                                @unknown default:
-                                                    Color.clear.frame(width: 0, height: 0)
-                                                }
-                                            }
-                                            VStack {
-                                                Text(video.title ?? "No title")
-                                                    .font(.title3)
-                                                Text(video.channel.name ?? "No channel name")
-                                            }
+                                            VideoView(video: video)
                                         }
                                     }
-                                    .frame(width: geometry.size.width, height: geometry.size.height)
                                 },
                                 contentFrame: { _ in
-                                    return .init(x: 0, y: 0, width: geometry.size.width, height: 200)
+                                    return .init(x: 0, y: 0, width: geometry.size.width, height: 205)
                                 },
                                 increaseIndexAction: { changeIndex in
                                     if changeIndex < model.videos.count - 1 {
@@ -119,26 +102,9 @@ struct AutomaticLoadMoreView: View {
                             ForEach(shouldStopAt.0 ? Array(model.videos.prefix(shouldStopAt.1).enumerated()) : Array(model.videos.enumerated()), id: \.offset) { _, content in
                                 HStack {
                                     if let video = content as? YTVideo {
-                                        CachedAsyncImage(url: video.thumbnails.last?.url) { result in
-                                            switch result {
-                                            case .empty:
-                                                Text("No image")
-                                            case .success(let image):
-                                                image.resizable().scaledToFit()
-                                            case .failure(let error):
-                                                Text(error.localizedDescription)
-                                            @unknown default:
-                                                Color.clear.frame(width: 0, height: 0)
-                                            }
-                                        }
-                                        VStack {
-                                            Text(video.title ?? "No title")
-                                                .font(.title3)
-                                            Text(video.channel.name ?? "No channel name")
-                                        }
+                                        VideoView(video: video)
                                     }
                                 }
-                                .border(.white)
                                 .frame(width: geometry.size.width, height: 200)
                             }
                         }

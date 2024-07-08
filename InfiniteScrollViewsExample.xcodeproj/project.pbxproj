@@ -407,7 +407,7 @@
 			repositoryURL = "https://github.com/b5i/InfiniteScrollViews";
 			requirement = {
 				kind = exactVersion;
-				version = 1.0.1;
+				version = 1.0.2;
 			};
 		};
 		344DFF042A69918E0057093F /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
@@ -423,7 +423,7 @@
 			repositoryURL = "https://github.com/b5i/YouTubeKit";
 			requirement = {
 				kind = revision;
-				revision = ccd7699b5c80b0008edb6a5758f62215c91632b8;
+				revision = b5ad96559d35916630711aa4caa8a425764a1195;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

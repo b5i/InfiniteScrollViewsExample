@@ -1,12 +1,13 @@
 {
+  "originHash" : "619770d139a0f7bbf946693a7ae2e3ef604d3c4f6013253dd17f478407ca2d96",
   "pins" : [
     {
       "identity" : "infinitescrollviews",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/b5i/InfiniteScrollViews",
       "state" : {
-        "revision" : "74d8b299687cc9b092efbe7d3ec5dd543e7ca58e",
-        "version" : "1.0.1"
+        "revision" : "c0580d06ed674b9c6711d2a79db65fc9c6b4ebbc",
+        "version" : "1.0.2"
       }
     },
     {
@@ -23,9 +24,9 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/b5i/YouTubeKit",
       "state" : {
-        "revision" : "ccd7699b5c80b0008edb6a5758f62215c91632b8"
+        "revision" : "b5ad96559d35916630711aa4caa8a425764a1195"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

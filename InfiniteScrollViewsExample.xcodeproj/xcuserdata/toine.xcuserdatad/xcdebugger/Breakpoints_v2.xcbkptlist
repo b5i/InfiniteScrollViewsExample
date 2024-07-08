@@ -242,38 +242,6 @@
             endingLineNumber = "584"
             landmarkName = "placeNewViewToLeft(leftEdge:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4FD0BB6A-89AD-4F49-BBA1-495CFAAA51B0 - 755b585c1c8175c3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "InfiniteScrollViewsExample.UIInfiniteScrollView.placeNewViewToLeft(leftEdge: CoreGraphics.CGFloat) -&gt; Swift.Optional&lt;CoreGraphics.CGFloat&gt;"
-                  moduleName = "InfiniteScrollViewsExample"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/toine/app/AntoineBollengier/InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "549"
-                  endingLineNumber = "549"
-                  offsetFromSymbolStart = "136">
-               </Location>
-               <Location
-                  uuid = "4FD0BB6A-89AD-4F49-BBA1-495CFAAA51B0 - 755b585c1c8175a0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "InfiniteScrollViewsExample.UIInfiniteScrollView.placeNewViewToLeft(leftEdge: CoreGraphics.CGFloat) -&gt; Swift.Optional&lt;CoreGraphics.CGFloat&gt;"
-                  moduleName = "InfiniteScrollViewsExample"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/toine/app/AntoineBollengier/InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "548"
-                  endingLineNumber = "548"
-                  offsetFromSymbolStart = "136">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -514,38 +482,6 @@
             endingLineNumber = "485"
             landmarkName = "layoutSubviews()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "0AE8A0F4-B813-4D1E-B49C-79A2E48BED99 - c48d5d4c27cc13fc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "InfiniteScrollViewsExample.UIInfiniteScrollView.layoutSubviews() -&gt; ()"
-                  moduleName = "InfiniteScrollViewsExample"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/toine/app/AntoineBollengier/InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "462"
-                  endingLineNumber = "462"
-                  offsetFromSymbolStart = "412">
-               </Location>
-               <Location
-                  uuid = "0AE8A0F4-B813-4D1E-B49C-79A2E48BED99 - ba05ec55b5da8755"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; Swift.Optional&lt;&#x3c4;_0_0&gt; in InfiniteScrollViewsExample.UIInfiniteScrollView.layoutSubviews() -&gt; ()"
-                  moduleName = "InfiniteScrollViewsExample"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/toine/app/AntoineBollengier/InfiniteScrollViews/Sources/InfiniteScrollViews/InfiniteScrollView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "463"
-                  endingLineNumber = "463"
-                  offsetFromSymbolStart = "356">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -590,24 +526,8 @@
             filePath = "AutomaticLoadMoreView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
-            landmarkName = "getMoreVideos()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E4ACF5B3-589F-4F76-B204-C53D80E2F408"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AutomaticLoadMoreView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "getMoreVideos()"
             landmarkType = "7">
          </BreakpointContent>

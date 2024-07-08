@@ -37,7 +37,7 @@ struct AutomaticLoadMoreView: View {
                     .padding()
                 if customMode {
                     VStack {
-                        if model.videos.count == 0 {
+                        if model.response == nil {
                             ProgressView()
                         } else {
                             InfiniteScrollView(
@@ -45,8 +45,8 @@ struct AutomaticLoadMoreView: View {
                                 changeIndex: baseIndex,
                                 content: { changeIndex in
                                     Group {
-                                        if model.videos.count > changeIndex + 1, let video = model.videos[changeIndex] as? YTVideo {
-                                            VideoView(video: video)
+                                        if model.videos.count > changeIndex + 1 {
+                                            VideoView(video: model.videos[changeIndex])
                                         }
                                     }
                                 },
@@ -101,9 +101,7 @@ struct AutomaticLoadMoreView: View {
                         LazyVStack {
                             ForEach(shouldStopAt.0 ? Array(model.videos.prefix(shouldStopAt.1).enumerated()) : Array(model.videos.enumerated()), id: \.offset) { _, content in
                                 HStack {
-                                    if let video = content as? YTVideo {
-                                        VideoView(video: video)
-                                    }
+                                    VideoView(video: content)
                                 }
                                 .frame(width: geometry.size.width, height: 200)
                             }
@@ -119,11 +117,14 @@ struct AutomaticLoadMoreView: View {
         
         let YTM = YouTubeModel()
         @Published var isQuerying: Bool = false
-        @Published var videos: [any YTSearchResult] = []
-        var tokens: (String, String)?
+        @Published var response: SearchResponse? = nil
+        
+        var videos: [YTVideo] {
+            return self.response?.results.compactMap({$0 as? YTVideo}) ?? []
+        }
         
         func refreshVideos() async {
-            tokens = nil
+            self.response = nil
             await getMoreVideos()
         }
         
@@ -135,29 +136,19 @@ struct AutomaticLoadMoreView: View {
             DispatchQueue.main.async {
                 self.isQuerying = true
             }
-            if let tokens = tokens {
-                let (result, error) = await HomeScreenResponse.Continuation.sendRequest(youtubeModel: YTM, data: [.continuation: tokens.0, .visitorData: tokens.1])
-                guard let result = result else { print("Coulnd't fetch error?: \(String(describing: error?.localizedDescription))"); DispatchQueue.main.async { self.isQuerying = false }; return }
-                if let continuationToken = result.continuationToken {
-                    self.tokens?.0 = continuationToken
-                }
+            if self.response != nil {
+                let continuation = try? await self.response?.fetchContinuationThrowing(youtubeModel: YTM)
+                guard let continuation = continuation else { print("Couldn't fetch continuation"); DispatchQueue.main.async { self.isQuerying = false }; return }
                 DispatchQueue.main.async {
-                    self.videos.append(contentsOf: result.results)
-                    self.isQuerying = false
+                    self.response?.mergeContinuation(continuation)
                 }
             } else {
-                let (result, error) = await HomeScreenResponse.sendRequest(youtubeModel: YTM, data: [:])
-                guard let result = result else { print("Coulnd't fetch error?: \(String(describing: error?.localizedDescription))"); DispatchQueue.main.async { self.isQuerying = false }; return }
-                if let continuationToken = result.continuationToken, let visitorData = result.visitorData {
-                    self.tokens = (continuationToken, visitorData)
-                }
+                let response = try? await SearchResponse.sendThrowingRequest(youtubeModel: YTM, data: [.query: "trending"])
+                
+                guard let response = response else { print("Couldn't fetch videos"); DispatchQueue.main.async { self.isQuerying = false }; return }
                 DispatchQueue.main.async {
-                    /// Refresh UI.
-                    self.videos = []
-                    DispatchQueue.main.async {
-                        self.videos = result.results
-                        self.isQuerying = false
-                    }
+                    self.isQuerying = false
+                    self.response = response
                 }
             }
         }

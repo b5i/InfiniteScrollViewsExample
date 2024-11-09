@@ -119,6 +119,33 @@ struct VideoView: View {
         }
     }
     
+    #if os(macOS)
+    
+    // Inspired from https://developer.apple.com/documentation/coregraphics/cgimage/1454683-cropping
+    @MainActor private func cropImage(_ inputImage: Image) -> Image? {
+        // Extract UIImage from Image
+        guard #available(macOS 16.0, *), let nsImage = ImageRenderer(content: inputImage).nsImage else { return nil }
+        let portionToCut = (nsImage.size.height - nsImage.size.width * 9/16) / 2
+        
+        // Scale cropRect to handle images larger than shown-on-screen size
+        var cropZone = CGRect(x: 0,
+                              y: portionToCut,
+                              width: nsImage.size.width,
+                              height: nsImage.size.height - portionToCut * 2)
+        
+        // Perform cropping in Core Graphics
+        guard let cutImageRef: CGImage = nsImage.cgImage(forProposedRect: &cropZone, context: nil, hints: [:])
+        else {
+            return nil
+        }
+        
+        // Return image to NSImage
+        let croppedImage: NSImage = NSImage(cgImage: cutImageRef, size: cropZone.size)
+        return Image(nsImage: croppedImage)
+    }
+    
+    #else
+    
     // Inspired from https://developer.apple.com/documentation/coregraphics/cgimage/1454683-cropping
     @MainActor private func cropImage(_ inputImage: Image) -> Image? {
         // Extract UIImage from Image
@@ -141,4 +168,6 @@ struct VideoView: View {
         let croppedImage: UIImage = UIImage(cgImage: cutImageRef)
         return Image(uiImage: croppedImage)
     }
+    
+    #endif
 }

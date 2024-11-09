@@ -20,9 +20,9 @@ struct HorizonalView: View {
                     content: { changingIndex in
                         ZStack {
                             RoundedRectangle(cornerRadius: 25)
-                                .foregroundStyle(.white)
+                                .foregroundStyle(.primary)
                             Text("Current index is: \(changingIndex)")
-                                .foregroundStyle(.black)
+                                .foregroundStyle(.background)
                         }
                         .padding()
                         .onTapGesture {

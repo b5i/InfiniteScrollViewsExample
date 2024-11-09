@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3402201E2B000A480007E9EB /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402201D2B000A480007E9EB /* VideoView.swift */; };
-		340DC5302A65E4DB00F0876F /* InfiniteScrollViews in Frameworks */ = {isa = PBXBuildFile; productRef = 340DC52F2A65E4DB00F0876F /* InfiniteScrollViews */; };
 		344DFF062A69918E0057093F /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 344DFF052A69918E0057093F /* CachedAsyncImage */; };
 		346258E92A643AFC0046D0ED /* InfiniteScrollViewsExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346258E82A643AFC0046D0ED /* InfiniteScrollViewsExampleApp.swift */; };
 		346258EB2A643AFC0046D0ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346258EA2A643AFC0046D0ED /* ContentView.swift */; };
@@ -20,6 +19,7 @@
 		346259002A643B530046D0ED /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346258FB2A643B530046D0ED /* CalendarView.swift */; };
 		346259062A6458940046D0ED /* AutomaticLoadMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346259052A6458940046D0ED /* AutomaticLoadMoreView.swift */; };
 		346259092A6463FE0046D0ED /* YouTubeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 346259082A6463FE0046D0ED /* YouTubeKit */; };
+		34F6CF4F2CE015AA003F7389 /* InfiniteScrollViews in Frameworks */ = {isa = PBXBuildFile; productRef = 34F6CF4E2CE015AA003F7389 /* InfiniteScrollViews */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,8 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34F6CF4F2CE015AA003F7389 /* InfiniteScrollViews in Frameworks */,
 				344DFF062A69918E0057093F /* CachedAsyncImage in Frameworks */,
-				340DC5302A65E4DB00F0876F /* InfiniteScrollViews in Frameworks */,
 				346259092A6463FE0046D0ED /* YouTubeKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -125,8 +125,8 @@
 			name = InfiniteScrollViewsExample;
 			packageProductDependencies = (
 				346259082A6463FE0046D0ED /* YouTubeKit */,
-				340DC52F2A65E4DB00F0876F /* InfiniteScrollViews */,
 				344DFF052A69918E0057093F /* CachedAsyncImage */,
+				34F6CF4E2CE015AA003F7389 /* InfiniteScrollViews */,
 			);
 			productName = InfiniteScrollViewsExample;
 			productReference = 346258E52A643AFC0046D0ED /* InfiniteScrollViewsExample.app */;
@@ -158,8 +158,8 @@
 			mainGroup = 346258DC2A643AFC0046D0ED;
 			packageReferences = (
 				346259072A6463FE0046D0ED /* XCRemoteSwiftPackageReference "YouTubeKit" */,
-				340DC52B2A65E3FB00F0876F /* XCRemoteSwiftPackageReference "InfiniteScrollViews" */,
 				344DFF042A69918E0057093F /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+				34F6CF4D2CE015AA003F7389 /* XCRemoteSwiftPackageReference "InfiniteScrollViews" */,
 			);
 			productRefGroup = 346258E62A643AFC0046D0ED /* Products */;
 			projectDirPath = "";
@@ -340,9 +340,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Antoine-Bollengier.InfiniteScrollViewsExample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -369,9 +374,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Antoine-Bollengier.InfiniteScrollViewsExample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -402,14 +412,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		340DC52B2A65E3FB00F0876F /* XCRemoteSwiftPackageReference "InfiniteScrollViews" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/b5i/InfiniteScrollViews";
-			requirement = {
-				kind = exactVersion;
-				version = 1.0.2;
-			};
-		};
 		344DFF042A69918E0057093F /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
@@ -426,14 +428,17 @@
 				revision = b5ad96559d35916630711aa4caa8a425764a1195;
 			};
 		};
+		34F6CF4D2CE015AA003F7389 /* XCRemoteSwiftPackageReference "InfiniteScrollViews" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/b5i/InfiniteScrollViews";
+			requirement = {
+				kind = revision;
+				revision = a98923b134d2c03a044a750f53371d39452ba938;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		340DC52F2A65E4DB00F0876F /* InfiniteScrollViews */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 340DC52B2A65E3FB00F0876F /* XCRemoteSwiftPackageReference "InfiniteScrollViews" */;
-			productName = InfiniteScrollViews;
-		};
 		344DFF052A69918E0057093F /* CachedAsyncImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 344DFF042A69918E0057093F /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
@@ -443,6 +448,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 346259072A6463FE0046D0ED /* XCRemoteSwiftPackageReference "YouTubeKit" */;
 			productName = YouTubeKit;
+		};
+		34F6CF4E2CE015AA003F7389 /* InfiniteScrollViews */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 34F6CF4D2CE015AA003F7389 /* XCRemoteSwiftPackageReference "InfiniteScrollViews" */;
+			productName = InfiniteScrollViews;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -7,8 +7,8 @@
 
 import SwiftUI
 import YouTubeKit
-import InfiniteScrollViews
 import CachedAsyncImage
+import InfiniteScrollViews
 
 struct AutomaticLoadMoreView: View {
     @ObservedObject private var model = YTModel.shared
@@ -35,6 +35,9 @@ struct AutomaticLoadMoreView: View {
                     .padding()
                 Toggle("Stop at \(shouldStopAt.1) elements", isOn: $shouldStopAt.0)
                     .padding()
+                #if os(macOS)
+                Text("!!! Scroll to the top to fetch new results !!!")
+                #endif
                 if customMode {
                     VStack {
                         if model.response == nil {
@@ -140,6 +143,7 @@ struct AutomaticLoadMoreView: View {
                 let continuation = try? await self.response?.fetchContinuationThrowing(youtubeModel: YTM)
                 guard let continuation = continuation else { print("Couldn't fetch continuation"); DispatchQueue.main.async { self.isQuerying = false }; return }
                 DispatchQueue.main.async {
+                    self.isQuerying = false
                     self.response?.mergeContinuation(continuation)
                 }
             } else {

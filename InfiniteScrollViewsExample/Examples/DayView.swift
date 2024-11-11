@@ -3,7 +3,7 @@
 //
 //  Created by Antoine Bollengier (github.com/b5i) on 15.07.2023.
 //  Copyright © 2023 Antoine Bollengier. All rights reserved.
-//  
+//
 
 import SwiftUI
 import InfiniteScrollViews
@@ -13,21 +13,20 @@ struct DayView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                VStack {
-                    HStack {
-                        Spacer()
-                        ForEach(0..<7) { index in
-                            Text(Calendar.current.shortWeekdaySymbols[index])
-                                .font(.caption2)
-                            if index != 6 {
-                                Spacer()
-                            }
+                HStack {
+                    Spacer()
+                    ForEach(0..<7) { index in
+                        Text(Calendar.current.shortWeekdaySymbols[index])
+                            .font(.caption2)
+                        if index != 6 {
                             Spacer()
                         }
+                        Spacer()
                     }
+                }
+                .frame(height: geometry.size.height * 0.05)
+                VStack {
                     #if os(macOS)
-                    Text("PagedInfiniteScrollView is not implemented for macOS at the moment.")
-                    /*
                     PagedInfiniteScrollView(
                         changeIndex: $nowDate,
                         content: { currentDate in
@@ -67,16 +66,16 @@ struct DayView: View {
                         decreaseIndexAction: { currentDate in
                             return currentDate.addingXDays(x: -7)
                         },
-                        shouldAnimateBetween: { date1, date2 in
-                            if date1 != date2 {
-                                return shouldAnimateWithWeeks(currentDate: date1, nextDate: date2)
+                        shouldAnimateBetween: {
+                            if !$0.isInSameWeek(as: $1) {
+                                return (true, $0.timeIntervalSince1970 < $1.timeIntervalSince1970 ? .leading : .trailing)
                             }
-                            return false
-                        },
-                        transitionStyle: .stackHistory
+                            return (false, .trailing)
+                        }, indexesEqual: {
+                            $0.isInSameDay(as: $1)
+                        }
                     )
                     .frame(height: geometry.size.height * 0.1)
-                     */
                     #else
                     PagedInfiniteScrollView(
                         changeIndex: $nowDate,
@@ -131,9 +130,6 @@ struct DayView: View {
                 }
                 .frame(height: geometry.size.height * 0.1)
                 #if os(macOS)
-                Text("PagedInfiniteScrollView is not implemented for macOS at the moment.")
-
-                /*
                 PagedInfiniteScrollView(
                     changeIndex: $nowDate,
                     content: { day in
@@ -145,13 +141,12 @@ struct DayView: View {
                     decreaseIndexAction: { currentDate in
                         return currentDate.addingXDays(x: -1)
                     },
-                    shouldAnimateBetween: { date1, date2 in
-                        if date1 == date2 { return false }
-                        return Calendar.current.isDate(date1, inSameDayAs: date2) ? false : date1.timeIntervalSince1970 < date2.timeIntervalSince1970 ? true : true
-                    },
-                    transitionStyle: .stackHistory
+                    shouldAnimateBetween: { oldDate, newDate in
+                        return oldDate.isInSameDay(as: newDate) ? (false, .trailing) : oldDate.timeIntervalSince1970 < newDate.timeIntervalSince1970 ? (true, .leading) : (true, .trailing)
+                    }, indexesEqual: {
+                        $0.isInSameDay(as: $1)
+                    }
                 )
-                 */
                 #else
                 PagedInfiniteScrollView(
                     changeIndex: $nowDate,

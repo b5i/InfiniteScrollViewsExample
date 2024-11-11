@@ -12,7 +12,6 @@ struct PagedCalendarView: View {
     @State private var nowDate: Date = .now
     var body: some View {
         #if os(macOS)
-        /*
         PagedInfiniteScrollView(
             changeIndex: $nowDate,
             content: { month in
@@ -24,14 +23,12 @@ struct PagedCalendarView: View {
             decreaseIndexAction: { currentDate in
                 return currentDate.addingXDays(x: -30)
             },
-            shouldAnimateBetween: { date1, date2 in
-                if date1 == date2 { return (false) }
-                return Calendar.current.isDate(date1, inSameDayAs: date2) ? false : date1.timeIntervalSince1970 < date2.timeIntervalSince1970 ? true : true
-            },
-            transitionStyle: .stackHistory
+            shouldAnimateBetween: { oldDate, newDate in
+                return oldDate.isInSameDay(as: newDate) ? (false, .trailing) : oldDate.timeIntervalSince1970 < newDate.timeIntervalSince1970 ? (true, .trailing) : (true, .leading)
+            }, indexesEqual: {
+                $0.isInSameMonth(as: $1)
+            }
         )
-         */
-        Text("PagedInfiniteScrollView is not implemented for macOS at the moment.")
         #else
         PagedInfiniteScrollView(
             changeIndex: $nowDate,

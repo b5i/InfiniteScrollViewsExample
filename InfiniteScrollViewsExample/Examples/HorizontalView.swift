@@ -30,7 +30,7 @@ struct HorizonalView: View {
                         }
                     },
                     contentFrame: { changingIndex in
-                        return .init(x: 0, y: geometry.size.height / 2, width: 300, height: 300)
+                        return .init(x: 0, y: 300, width: 300, height: 300)
                     },
                     increaseIndexAction: {$0 + 1},
                     decreaseIndexAction: {$0 - 1},

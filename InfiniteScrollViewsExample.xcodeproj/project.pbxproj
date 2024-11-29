@@ -433,7 +433,7 @@
 			repositoryURL = "https://github.com/b5i/InfiniteScrollViews";
 			requirement = {
 				kind = revision;
-				revision = 92e9a14ceea4430fe522faeb68070aa43ea2be9e;
+				revision = adec1afc091e1f6e367da585a3cb699c2cb95a5f;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

@@ -48,6 +48,51 @@ struct PagedCalendarView: View {
             transitionStyle: .scroll,
             navigationOrientation: .vertical
         )
+        .background {
+            // test new areIndexesEqualAction compatibility
+            // case not equatable and no areIndexesEqualAction given -> warning
+            
+            PagedInfiniteScrollView(
+                changeIndex: .constant({} as (() -> Void)),
+                content: { month in
+                    CalendarView.MonthView(date: .now)
+                },
+                increaseIndexAction: { currentDate in
+                    return {}
+                },
+                decreaseIndexAction: { currentDate in
+                    return {}
+                },
+                shouldAnimateBetween: { date1, date2 in
+                    return (false, .forward)
+                },
+                transitionStyle: .scroll,
+                navigationOrientation: .vertical
+            )
+            .hidden()
+            
+            // case not equatable and areIndexesEqualAction given -> no warning
+            
+            PagedInfiniteScrollView(
+                changeIndex: .constant({} as (() -> Void)),
+                content: { month in
+                    CalendarView.MonthView(date: .now)
+                },
+                increaseIndexAction: { currentDate in
+                    return {}
+                },
+                decreaseIndexAction: { currentDate in
+                    return {}
+                },
+                areIndexesEqualAction: {_, _ in return false},
+                shouldAnimateBetween: { date1, date2 in
+                    return (false, .forward)
+                },
+                transitionStyle: .scroll,
+                navigationOrientation: .vertical
+            )
+            .hidden()
+        }
         #endif
     }
 }
